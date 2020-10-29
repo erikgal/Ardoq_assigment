@@ -21,7 +21,7 @@ def max_product_simple(lst):                    #Actual fast algorithm
     max_lst = [None]*3
     min_val = float('inf')
 
-    for i in range(3):                          #Initates max_lst with first the integers, and saves min_val
+    for i in range(3):                          #Initates max_lst with first three integers, and saves min_val
         max_lst[i] = lst[i]
         if lst[i] < min_val:
             min_val = lst[i]
@@ -31,7 +31,7 @@ def max_product_simple(lst):                    #Actual fast algorithm
         if int > min_val:
             max_lst[min_i] = int
             min_val = int
-            for j, el in enumerate(max_lst):    #Finds new min_val in altered max_lst, med andre ord heapify
+            for j, el in enumerate(max_lst):    #Finds new min_val in altered max_lst, basicly heapify()
                 if el < min_val:
                     min_val = el
                     min_i = j
