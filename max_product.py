@@ -17,7 +17,7 @@ def SAFE_Nmaxelements(list1, N):                #Slow safe test algorithm
         prod = prod * el
     return prod
 
-def max_product_simple(lst):                    #Actual fast algorithm
+def max_product_fast(lst):                    #Actual fast algorithm
     max_lst = [None]*3
     min_val = float('inf')
 
@@ -46,7 +46,7 @@ def test():
     for i in range(len(test)):
         test[i] = random.randint(-10000, 10000)
 
-    res = max_product_simple(test)
+    res = max_product_fast(test)
     answ = SAFE_Nmaxelements(test, 3)
     print("Correct Answer:", answ, "My Answer:", res, "Error:", abs(answ-res))
 
@@ -54,6 +54,6 @@ test()
 
 
 """
-max_product_simple has optimal time complexity because k = 3. If the assigment would have been "find k-largest elements", it would be
-faster to have a min-heap structure.
+max_product_fast has optimal time complexity because k = 3 and therefor WC = O(3n) = O(n). If the assigment would have 
+been "find k-largest elements", it would be faster to have a min-heap structure with WC = O(nlog(n)).
 """

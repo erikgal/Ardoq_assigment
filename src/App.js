@@ -16,7 +16,7 @@ function App() {
       fetchData()
     },
       60000);
-      return () => clearTimeout(timer); //cleen-up
+      return () => clearTimeout(timer); //clean-up
   }, [])
 
   const fetchData = () => {
@@ -55,12 +55,12 @@ function App() {
   }
 
   const getTable = () => {
-    //console.log("Status: ", stationStatus)
     if (station !== null && isLoaded) {
       let elID = null
       for (var i = 0; i < stationNames.length; i++) {
         if (stationNames[i].name === station) {
           elID = i
+          break
         }
       }
       const id = elID
