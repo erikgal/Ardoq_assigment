@@ -54,6 +54,6 @@ test()
 
 
 """
-max_product_fast has optimal time complexity because k = 3 and therefor WC = O(3n) = O(n). If the assigment would have 
-been "find k-largest elements", it would be faster to have a min-heap structure with WC = O(nlog(n)).
+max_product_fast has a efficient time complexity because k = 3. If the assigment would have 
+been "find k-largest elements", it would be faster to use a min-heap structure with WC = O(nlog(n)).
 """
